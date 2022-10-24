@@ -22,12 +22,18 @@ struct ridericon: View {
                     .frame(width: 50, height: 50)
                     .offset(x: 120, y: 210)
             }
-            
-            Text(rider.name)
-                .font(.custom("", size: 40))
-                .foregroundColor(Color(colorn: rider.color))
-                .multilineTextAlignment(.center)
-            
+            .padding()
+            VStack {
+                Text(rider.name)
+                    .font(.custom("", size: 40))
+                    .foregroundColor(Color(colorn: rider.color))
+                    .multilineTextAlignment(.center)
+                Text(rider.number)
+                    .font(.custom("NIKEA", size: 60))
+                    .foregroundColor(Color(colorn: rider.color))
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
         }
     }
 }
